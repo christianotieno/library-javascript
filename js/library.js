@@ -1,3 +1,5 @@
+import { bookToHTML } from "./dom.js";
+
 const id = 0;
 
 function Book(title, author, pages, read = false) {
@@ -26,6 +28,14 @@ submit.onclick = () => {
   document.getElementById('read').checked = false;
 };
 
+const render = () => {
+ 
+}
+
+
+
 bookList.push(new Book('The great gatsby', 'F. Scott', 255, true));
 bookList.push(new Book('Anna Karenina', 'Leo Tolstoy', 315, false));
 bookList.push(new Book('To Kill a Mockingbird', 'Harper Lee', 192, true));
+
+render();
