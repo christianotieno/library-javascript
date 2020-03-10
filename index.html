@@ -12,7 +12,26 @@
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to the library app!</h1>
+      <h1>Library App</h1>
+      <form action="#">
+        <table class="col-md-8">
+          <tr>
+            <th><label for="author">Author</label></th>
+            <th><label for="title">Title</label></th>
+            <th><label for="pages">Pages</label></th>
+            <th><label for="status">Status</label></th>
+            <th><label for="submit">Submit</label></th>
+          </tr>
+          <tr>
+            <td><input type="text" id="author" name="author"></td>
+            <td><input type="text" id="title" name="title"></td>
+            <td><input type="number" id="pages" name="pages"></td>
+            <td><input type="checkbox" id="read" name="status" value="false"></td>
+            <td><button class="btn btn-primary" action="#">submit</button></td>
+          </tr>
+        </table>
+        </form>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
