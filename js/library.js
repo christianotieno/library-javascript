@@ -20,10 +20,10 @@ function render() {
   document.getElementById('book-list').innerHTML = layout;
 }
 
-const addBookButton = document.getElementById('submit');
+const addBookToLibrary = document.getElementById('submit');
 
 // updating array
-submit.onclick = () => {
+addBookToLibrary.onclick = () => {
   const author = document.getElementById('author').value;
   const title = document.getElementById('title').value;
   const pages = document.getElementById('pages').value;
