@@ -21,6 +21,8 @@
                 <td>Title</td>
                 <td>Pages</td>
                 <td>Status</td>
+                <td>ID</td>
+                <td></td>
               </tr>
             </thead>
             <tbody id="book-list"></tbody>
@@ -28,7 +30,7 @@
         </div>
         <div class="col-md-4">
           <button id="add-book" class="btn btn-primary">Add New Book</button>
-          <form>
+          <form id="book-form" class="d-none">
             <div class="form-group">
               <label for="author">Author</label>
               <input type="text" id="author" class="form-control" required>
@@ -45,9 +47,12 @@
               <label for="status">Read</label>
               <input type="checkbox" id="status">
             </div>
+            <input id= "submit" type="submit" class="btn btn-primary d-none" value="Submit" />
+            <button id="close-form" type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> <br>
           </form>
           <!-- <button class="btn btn-primary" onclick="addBookToLibrary()">Submit</button> -->
-          <input id= "submit" type="button" class="btn btn-primary" value="Submit" />
         </div>
       </div>
     </div>
