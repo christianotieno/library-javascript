@@ -14,7 +14,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://christianotieno.github.io/library-javascript/)
+[Live Demo Link](https://raw.githack.com/ChristianOtieno/library-javascript/feature/library/index.html)
 
 ## Getting Started
 
