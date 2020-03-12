@@ -30,7 +30,7 @@ addBookToLibrary.onclick = () => {
   const pages = document.getElementById('pages').value;
   const status = document.getElementById('status').checked;
 
-  if(author === '' || title === '' || pages === '') {
+  if (author === '' || title === '' || pages === '') {
     alert('Please fill out all fields!');
   } else {
     myLibrary.push(new Book(author, title, pages, status));
@@ -45,20 +45,18 @@ addBookToLibrary.onclick = () => {
 };
 
 // delete book
-
 const deleteBook = (element) => {
   const bookId = Number(element.parentElement.previousElementSibling.innerText);
 
-  myLibrary.map( book => {
-    if(book.id == bookId) {
+  myLibrary.map(book => {
+    if (book.id === bookId) {
       myLibrary.splice(myLibrary.indexOf(book), 1);
     }
   });
   render();
-}
+};
 
 // open/close form
-
 const openForm = document.getElementById('add-book');
 const closeForm = document.getElementById('close-form');
 
@@ -71,23 +69,21 @@ closeForm.onclick = () => {
 };
 
 // change status
-
 const changeStatus = (element) => {
   const bookId = Number(element.parentElement.nextElementSibling.innerText);
 
-  myLibrary.map( book => {
-    if(book.id === bookId) {
+  myLibrary.map(book => {
+    if (book.id === bookId) {
       book.status = !book.status;
     }
     render();
   });
-}
+};
 
 
 // event listener for click
-
 document.querySelector('#book-list').addEventListener('click', (element) => {
-  if(element.target.classList.contains('delete')) {
+  if (element.target.classList.contains('delete')) {
     deleteBook(element.target);
   } else if (element.target.classList.contains('read')) {
     changeStatus(element.target);

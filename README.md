@@ -2,7 +2,7 @@
 
 > A simple library page built with javascript and DOM.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/img/screenshot.png)
 
 Additional description about the project and its features.
 
@@ -14,7 +14,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://christianotieno.github.io/library-javascript/)
 
 ## Getting Started
 
@@ -22,17 +22,23 @@ Additional description about the project and its features.
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Setup and installation
 
-### Setup
-
-### Install
+```
+git clone git@github.com:ChristianOtieno/library-javascript.git
+```
 
 ### Usage
 
+```
+run live server
+```
+
 ### Run tests
 
-### Deployment
+```
+npx eslint .
+```
 
 ## Authors
 
@@ -65,4 +71,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.

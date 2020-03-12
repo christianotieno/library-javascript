@@ -10,16 +10,15 @@ function bookHtml(book) {
 }
 
 // toggle form
-
 const openButton = document.getElementById('add-book');
 const closeButton = document.getElementById('close-form');
 
 function toggleForm(action) {
-  if(action === 'open') {
+  if (action === 'open') {
     document.getElementById('book-form').classList.remove('d-none');
     document.getElementById('submit').classList.remove('d-none');
     openButton.classList.add('d-none');
-  } else if(action === 'close') {
+  } else if (action === 'close') {
     document.getElementById('book-form').classList.add('d-none');
     document.getElementById('submit').classList.add('d-none');
     openButton.classList.remove('d-none');
