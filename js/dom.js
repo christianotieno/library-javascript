@@ -24,5 +24,35 @@ function toggleForm(action) {
   }
 }
 
+function formInput() {
+  const author = document.getElementById('author').value;
+  const title = document.getElementById('title').value;
+  const pages = document.getElementById('pages').value;
+  const status = document.getElementById('status').checked;
 
-export { bookHtml, toggleForm };
+  const errorDiv = document.getElementById('error');
+  let value = [];
+
+  if (author === '' || title === '' || pages === '') {
+    errorDiv.classList.remove('d-none');
+    setTimeout(() => { errorDiv.classList.add('d-none'); }, 3000);
+    value = false;
+  } else {
+    value = [author, title, pages, status];
+  }
+  return value;
+}
+
+function clearFields() {
+  document.getElementById('author').value = '';
+  document.getElementById('title').value = '';
+  document.getElementById('pages').value = '';
+  document.getElementById('status').checked = false;
+}
+
+export {
+  bookHtml,
+  toggleForm,
+  formInput,
+  clearFields,
+};

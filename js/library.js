@@ -1,5 +1,7 @@
 /* eslint-disable import/extensions */
-import { bookHtml, toggleForm } from './dom.js';
+import {
+  bookHtml, toggleForm, formInput, clearFields,
+} from './dom.js';
 /* eslint-enable import/extensions */
 
 const myLibrary = [];
@@ -13,34 +15,32 @@ function Book(author, title, pages, status = false) {
   this.id = Math.floor(Math.random() * 10000);
 }
 
-myLibrary.push(new Book('Famous Author', 'The Great Book', 97, true));
-myLibrary.push(new Book('Famous Author Jr.', 'The Even Greater Book', 177, false));
-myLibrary.push(new Book('Not So Famous Author', 'The Not So Great Book', 246, true));
-
 // displays books added
 function render() {
   const layout = myLibrary.map(book => bookHtml(book)).join(' ');
   document.getElementById('book-list').innerHTML = layout;
 }
 
-const addBookToLibrary = document.getElementById('submit');
+const submit = document.getElementById('submit');
 
-// updating array
-addBookToLibrary.onclick = () => {
-  const author = document.getElementById('author').value;
-  const title = document.getElementById('title').value;
-  const pages = document.getElementById('pages').value;
-  const status = document.getElementById('status').checked;
+// Add book to library
 
+function addBookToLibrary(book) {
+  myLibrary.push(book);
 
-  myLibrary.push(new Book(author, title, pages, status));
-
-  document.getElementById('author').value = '';
-  document.getElementById('title').value = '';
-  document.getElementById('pages').value = '';
-  document.getElementById('status').checked = false;
+  clearFields();
   toggleForm('close');
   render();
+}
+
+// get values and send to addBookToLibrary function
+
+submit.onclick = () => {
+  const inputValues = formInput();
+
+  const book = new Book(...inputValues);
+
+  addBookToLibrary(book);
 };
 
 // delete book
@@ -90,5 +90,13 @@ document.querySelector('#book-list').addEventListener('click', (element) => {
     changeStatus(element.target);
   }
 });
+
+function defaultBooks() {
+  myLibrary.push(new Book('Famous Author', 'The Great Book', 97, true));
+  myLibrary.push(new Book('Famous Author Jr.', 'The Even Greater Book', 177, false));
+  myLibrary.push(new Book('Not So Famous Author', 'The Not So Great Book', 246, true));
+}
+
+defaultBooks();
 
 render();

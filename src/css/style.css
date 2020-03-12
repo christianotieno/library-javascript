@@ -31,3 +31,13 @@ body{
   font-size: larger;
   font-weight: bolder;
 }
+
+.error {
+  background-color: red;
+  color: white;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
