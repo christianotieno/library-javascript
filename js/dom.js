@@ -11,7 +11,6 @@ function bookHtml(book) {
 
 // toggle form
 const openButton = document.getElementById('add-book');
-const closeButton = document.getElementById('close-form');
 
 function toggleForm(action) {
   if (action === 'open') {

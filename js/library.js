@@ -1,4 +1,6 @@
+/* eslint-disable import/extensions */
 import { bookHtml, toggleForm } from './dom.js';
+/* eslint-enable import/extensions */
 
 const myLibrary = [];
 
@@ -11,9 +13,9 @@ function Book(author, title, pages, status = false) {
   this.id = Math.floor(Math.random() * 10000);
 }
 
-myLibrary.push(new Book('author1', 'title1', 123, true));
-myLibrary.push(new Book('author2', 'title2', 123, false));
-myLibrary.push(new Book('author3', 'title3', 123, true));
+myLibrary.push(new Book('Famous Author', 'The Great Book', 97, true));
+myLibrary.push(new Book('Famous Author Jr.', 'The Even Greater Book', 177, false));
+myLibrary.push(new Book('Not So Famous Author', 'The Not So Great Book', 246, true));
 
 // displays books added
 function render() {
@@ -30,18 +32,15 @@ addBookToLibrary.onclick = () => {
   const pages = document.getElementById('pages').value;
   const status = document.getElementById('status').checked;
 
-  if (author === '' || title === '' || pages === '') {
-    alert('Please fill out all fields!');
-  } else {
-    myLibrary.push(new Book(author, title, pages, status));
 
-    document.getElementById('author').value = '';
-    document.getElementById('title').value = '';
-    document.getElementById('pages').value = '';
-    document.getElementById('status').checked = false;
-    toggleForm('close');
-    render();
-  }
+  myLibrary.push(new Book(author, title, pages, status));
+
+  document.getElementById('author').value = '';
+  document.getElementById('title').value = '';
+  document.getElementById('pages').value = '';
+  document.getElementById('status').checked = false;
+  toggleForm('close');
+  render();
 };
 
 // delete book
@@ -52,6 +51,7 @@ const deleteBook = (element) => {
     if (book.id === bookId) {
       myLibrary.splice(myLibrary.indexOf(book), 1);
     }
+    return myLibrary;
   });
   render();
 };
@@ -76,8 +76,9 @@ const changeStatus = (element) => {
     if (book.id === bookId) {
       book.status = !book.status;
     }
-    render();
+    return myLibrary;
   });
+  render();
 };
 
 
