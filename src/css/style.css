@@ -1,0 +1,43 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../img/lib-bground.jpg");
+  color: black;
+}
+.table{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#main-header{
+  background-color: rgba(0, 0, 0, 0.9);
+  background-position: 50% 5%;
+}
+
+#book-form{
+  display: grid;
+  background-color: rgba(222, 184, 135, 0.9);
+  text-align: center;
+  font-weight: bolder;
+  padding: 5%;
+}
+
+.first{
+  color: burlywood;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+#book-list{
+  color: aliceblue;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

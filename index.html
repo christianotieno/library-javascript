@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>library</title>
+  </head>
+  <body>
+    <header id="main-header" class="text-white p-4 mb-3">
+      <div class="container">
+        <h1 id="header-title"><i class="fa fa-book"></i> library app</h1>
+      </div>
+    </header>
+    
+    <div class="container main">
+      <div class="error d-none" id="error">Please fill out all fields</div>
+      <div class="row">
+        <div class="col-md-8">
+          <table class="table">
+            <thead>
+              <tr class="first">
+                <td><b>Author</b></td>
+                <td><b>Title</b></td>
+                <td><b>Pages</b></td>
+                <td><b>Status</b></td>
+                <td><b>ISBN</b></td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+          </table>
+        </div>
+
+        <div class="col-md-4">
+          <button id="add-book" class="btn btn-primary">Add New Book</button>
+          <form id="book-form" class="d-none">
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="pages">Pages</label>
+              <input type="number" id="pages" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="status">Read</label>
+              <input type="checkbox" id="status">
+            </div>
+            <input id= "submit" type="submit" class="btn btn-primary d-none" value="Submit" />
+            <button id="close-form" type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> <br>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/library.js" type="module"></script>
+
+  </body>
+</html>
