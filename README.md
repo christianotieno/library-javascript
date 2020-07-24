@@ -4,7 +4,7 @@
 
 ![screenshot](./src/img/screenshot.png)
 
-Additional description about the project and its features.
+A summary description of the project and its features illustrated below.
 
 ## Built With
 
@@ -42,13 +42,13 @@ npx eslint .
 
 ## Authors
 
-👤 **Author1**
+👤 **Christian Otieno**
 
 - Github: [@ChristianOtieno](https://github.com/ChristianOtieno)
 - Twitter: [@iamchrisotieno](https://twitter.com/iamchrisotieno)
 - Linkedin: [Christian Otieno](https://linkedin.com/linkedinhandle)
 
-👤 **Author2**
+👤 **Ermin Cahtarevic**
 
 - Github: [@ermin-cahtarevic](https://github.com/ermin-cahtarevic)
 - Twitter: [@ErminCahtarevic](https://twitter.com/ErminCahtarevic)
@@ -63,11 +63,6 @@ Feel free to check the [issues page](https://github.com/ChristianOtieno/library-
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration.
 
 ## 📝 License
 
